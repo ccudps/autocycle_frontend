@@ -1,5 +1,5 @@
 import React from "react";
-import BrandMatchCard from "@/components/hm_brandmatchcard";
+import BrandMatchCard from "@/components/BrandMatchCard";
 
 const cardsData = [
   {
@@ -9,6 +9,7 @@ const cardsData = [
     sustainabilityPlacement:
       "Committed To Using Renewable And Recycled Materials And Aiming For Climate-Positive Operations By 2030.",
     productAssumptions: "Containers, Chairs, Tables, Floor Protection",
+    materialMatch: "Recycled Plastic, FSC Wood", // <-- Added for compatibility
     matchValue: "120.000€",
     combinedReach: "20 Million",
     annualVolume: "75 Tons"
@@ -20,6 +21,7 @@ const cardsData = [
     sustainabilityPlacement:
       "Innovating with bio-based and recycled materials for bricks and packaging, aiming for carbon-neutral operations.",
     productAssumptions: "Bricks, Packaging, Educational Kits",
+    materialMatch: "Bio-based ABS, Recycled PET", // <-- Added
     matchValue: "95.000€",
     combinedReach: "30 Million",
     annualVolume: "60 Tons"
@@ -31,6 +33,7 @@ const cardsData = [
     sustainabilityPlacement:
       "Focused on sustainable product design and circular economy in sports equipment.",
     productAssumptions: "Sports Equipment, Outdoor Gear",
+    materialMatch: "Recycled Nylon, Thermoplastics", // <-- Added
     matchValue: "110.000€",
     combinedReach: "18 Million",
     annualVolume: "80 Tons"
@@ -39,7 +42,6 @@ const cardsData = [
 
 const NeedMaterialBrandMatch = () => (
   <div className="bg-background min-h-screen">
-    {/* Top navigation and heading */}
     <div className="max-w-5xl mx-auto pt-16 px-4 sm:px-8">
       <div className="flex items-center gap-4 font-poppins text-base text-muted-foreground mb-12">
         <span className="text-muted-foreground">Form</span>
@@ -53,7 +55,16 @@ const NeedMaterialBrandMatch = () => (
       </h1>
       <div className="flex flex-col gap-10">
         {cardsData.map((card, idx) => (
-          <BrandMatchCard key={card.brand + idx} {...card} />
+          <BrandMatchCard
+            key={card.brand + idx}
+            brand={card.brand}
+            selectUrl={card.selectUrl}
+            assumptions={card.productAssumptions}
+            materialMatch={card.materialMatch}
+            matchValue={card.matchValue}
+            combinedReach={card.combinedReach}
+            annualVolume={card.annualVolume}
+          />
         ))}
       </div>
     </div>

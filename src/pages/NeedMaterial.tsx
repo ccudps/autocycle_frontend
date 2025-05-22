@@ -43,7 +43,7 @@ const NeedMaterial: React.FC = () => {
           <div className="flex gap-8 max-md:flex-col">
             <div className="flex-1">
               <label className="font-mulish text-lg font-extrabold text-primary mb-3 block">
-                Material Type
+                What type of material do you need?
               </label>
               <Select>
                 <SelectTrigger className="w-full h-16 px-4 border-2 border-border font-sans text-base text-muted-foreground rounded-lg">

@@ -15,7 +15,7 @@ const BrandMatchCard = ({
     {/* Select Button */}
     <Link
       to={selectUrl}
-      className="absolute right-[-1px] top-[-1px] z-10 bg-black text-white text-3xl md:text-2xl font-light px-8 py-2 flex items-center gap-2"
+      className="absolute -right-5 -top-6 z-10 bg-black text-white text-3xl md:text-2xl font-light px-8 py-2 flex items-center gap-2"
       style={{ borderTop: "1px solid black", borderRight: "1px solid black" }}
     >
       Select
@@ -25,7 +25,7 @@ const BrandMatchCard = ({
     </Link>
 
     {/* Card Content */}
-    <div className="flex-1 px-8 pt-16 pb-10 flex flex-col gap-8 md:gap-10 md:pt-16 md:pb-16 md:pl-16 md:pr-10">
+    <div className="flex-1 px-8 pt-10 pl-[280px] pb-10 flex-col">
       {/* Brand Placement */}
       <div>
         <div className="uppercase font-bold text-sm tracking-wider text-gray-400 mb-1">
@@ -77,12 +77,11 @@ const BrandMatchCard = ({
     </div>
 
     {/* Brand Name, Bottom Left */}
-    <div className="absolute left-0 bottom-0 md:static flex items-end md:items-center md:justify-start p-8 md:pb-8 md:pl-8 md:pr-0">
+    <div className="absolute -left-5 -bottom-5 bg-white">
       <span className="text-[72px] md:text-[120px] font-extrabold uppercase leading-none tracking-wide text-black md:mb-0 mb-[-1em]">
         {brand}
       </span>
     </div>
   </div>
 );
-
 export default BrandMatchCard;

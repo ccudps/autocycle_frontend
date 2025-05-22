@@ -8,7 +8,7 @@ import Footer from "@/components/Indexsections/Footer";
 
 const Index: React.FC = () => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen pt:5">
       <Navbar />
       <HeroSection />
       <HowItWorks />

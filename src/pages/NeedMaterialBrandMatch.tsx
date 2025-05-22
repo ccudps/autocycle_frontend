@@ -1,5 +1,5 @@
 import React from "react";
-import BrandMatchCard from "@/components/nm_brandmatchcard";
+import BrandMatchCard from "@/pages/nm_brandmatch";
 
 const cardsData = [
   {

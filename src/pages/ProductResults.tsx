@@ -22,7 +22,6 @@ const ProductResults: React.FC = () => {
 
   return (
     <div className="bg-background min-h-screen">
-      {/* Breadcrumb navigation */}
       <div className="max-w-5xl mx-auto pt-16 px-4 sm:px-8">
         <div className="flex items-center gap-4 font-poppins text-base text-muted-foreground mb-8">
           <Link to="/" className="text-muted-foreground hover:underline">Form</Link>
@@ -40,48 +39,56 @@ const ProductResults: React.FC = () => {
           </svg>
           <span className="text-primary">Suggestion</span>
         </div>
+        
+        {/*First Section*/}
+        <div className="relative w-full h-100 z-10 pt-[55%]">
+          {/* Brand header */}
+          <h1 className="absolute top-0 font-[Figtree,sans-serif] text-[60px] sm:text-[90px] font-extrabold uppercase leading-[1] text-primart z-20">
+            {brandData.company}<br />X<br />{brandData.collaborator}
+          </h1>
 
-        {/* Brand header */}
-        <h1 className="font-[Figtree,sans-serif] text-[60px] sm:text-[100px] font-extrabold uppercase leading-[1] text-primary mb-10">
-          {brandData.company}<br />X<br />{brandData.collaborator}
-        </h1>
+          {/* User Input - Change*/}
+          <div className="absolute top-14 right-0 bg-[#F8F4EE] w-[45%] max-h-[420] aspect-square z-10">
+              <div className="pl-[6rem] pt-[10rem]">
+                <h3 className="text-lg font-bold mb-4 text-primary font-poppins">USER INPUT:</h3>
+                <div className="grid grid-cols-2 gap-y-3 font-mulish text-base">
+                  <div>Company Name</div>
+                  <div className="font-bold">{brandData.company}</div>
+                  <div>Collab. Company</div>
+                  <div className="font-bold">{brandData.collaborator}</div>
+                  <div>Material</div>
+                  <div className="font-bold">{brandData.material}</div>
+                  <div>Location</div>
+                  <div className="font-bold">{brandData.location}</div>
+              </div>
+               <Button
+                  className="absolute -right-5 -bottom-4 z-10 bg-black text-white text-lg font-light px-8 py-2"
+                  type="button"
+                  onClick={() => navigate(-1)}
+                >
+                  Change
+                </Button>
+              </div>
+          </div>
+        </div>
 
         {/* Main content */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="relative z-10 pt-[55%]">
           {/* Left side - Product image */}
-          <div className="lg:w-1/2">
-            <div className="bg-muted rounded-lg flex items-center justify-center p-8 min-h-[320px]">
+          <div className="absolute w-[55%] left-0 top-0 z-10 aspect-square ">
+            <div className="bg-muted flex items-center p-8 min-h-[320px]">
               <img
-                src="/lovable-uploads/65bd1d70-31e6-43c0-89a1-eb902a13b48d.png"
+                src="/images/bmwxdecathlon.png"
                 alt="BMW Collaboration Product"
-                className="w-full max-w-[400px] rounded-lg shadow"
+                className="absolute -left-8 w-full max-w-[400px]"
               />
             </div>
           </div>
 
           {/* Right side - Product details */}
-          <div className="lg:w-1/2 flex flex-col justify-between">
+          <div className="absolute top-10 right-0 w-[50%] z-20">
             {/* User input summary */}
-            <div className="bg-accent/30 p-8 mb-8 rounded-lg">
-              <h3 className="text-lg font-bold mb-4 text-primary font-poppins">USER INPUT:</h3>
-              <div className="grid grid-cols-2 gap-y-3 font-mulish text-base">
-                <div>Company Name</div>
-                <div className="font-bold">{brandData.company}</div>
-                <div>Collab. Company</div>
-                <div className="font-bold">{brandData.collaborator}</div>
-                <div>Material</div>
-                <div className="font-bold">{brandData.material}</div>
-                <div>Location</div>
-                <div className="font-bold">{brandData.location}</div>
-              </div>
-              <Button
-                className="mt-6 float-right font-poppins bg-primary text-primary-foreground hover:bg-primary/90"
-                type="button"
-                onClick={() => navigate(-1)}
-              >
-                Change
-              </Button>
-            </div>
+            
 
             {/* Product description */}
             <p className="text-base mb-8 text-primary font-mulish">{brandData.description}</p>
@@ -102,10 +109,11 @@ const ProductResults: React.FC = () => {
               </div>
             </div>
           </div>
+        
         </div>
 
         {/* More inspiration section */}
-        <div className="mt-16">
+        <div className="relative mt-16 z-10">
           <h3 className="text-lg font-semibold mb-6 font-mulish text-primary">Explore more inspiration &gt;</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[1, 2, 3, 4].map((i) => (
@@ -123,29 +131,6 @@ const ProductResults: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Product idea input */}
-          <div className="mb-16">
-            <label className="block mb-4 font-mulish text-primary">
-              What kind of product do you imagine for this collaboration? (optional)
-            </label>
-            <Input
-              type="text"
-              placeholder="Backpack, Nightstand"
-              className="w-full h-14 border border-border rounded-lg font-mulish text-base"
-            />
-          </div>
-
-          {/* Get inspired button */}
-          <div className="flex justify-center mb-16">
-            <Button
-              className="bg-primary text-primary-foreground hover:bg-primary/90 py-4 px-8 text-xl rounded-lg font-poppins"
-              onClick={() => navigate("/collaborations")}
-              type="button"
-            >
-              Get inspired
-            </Button>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const options = [
     bg: "bg-accent/30 hover:bg-accent/50",
     title: "FOR BRAND COLLABRATION",
     action: "I HAVE MATERIAL",
-    img: "",
+    img: "images/Material Pile.png",
     alt: "Material pile"
   },
   {
@@ -15,7 +15,7 @@ const options = [
     bg: "bg-amber-200/50 hover:bg-amber-200/80",
     title: "FOR BRAND COLLABRATION",
     action: "I NEED MATERIAL",
-    img: "S",
+    img: "images/Material Sample.png",
     alt: "Material sample"
   }
 ];
@@ -52,7 +52,7 @@ const Collaborations: React.FC = () => {
                   <img 
                     src={opt.img}
                     alt={opt.alt}
-                    className="max-w-[80%] h-auto mt-4 rounded-md shadow"
+                    className="max-w-[80%] h-auto mt-4"
                   />
                 </div>
               </Link>

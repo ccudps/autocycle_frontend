@@ -24,7 +24,7 @@ const FaqSection: React.FC = () => {
 
   return (
     <>
-      <div className="flex min-h-[85px] w-full max-w-[1106px] font-normal mt-[129px] max-md:max-w-full max-md:mt-10">
+      <div className="relative min-h-[85px] w-full max-w-[1106px] font-normal mt-[129px] max-md:max-w-full max-md:mt-10">
         <div className="min-w-60 w-[486px]">
           <h2 className="w-full text-[41px] text-[rgba(57,48,45,1)] leading-none max-md:max-w-full">
             Frequently Asked Questions
