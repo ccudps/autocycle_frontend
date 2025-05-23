@@ -23,40 +23,35 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <>
-      <div className="relative min-h-[85px] w-full max-w-[1106px] font-normal mt-[129px] max-md:max-w-full max-md:mt-10">
-        <div className="min-w-60 w-[486px]">
-          <h2 className="w-full text-[41px] text-[rgba(57,48,45,1)] leading-none max-md:max-w-full">
-            Frequently Asked Questions
-          </h2>
-        </div>
+  <>
+    <div className="flex flex-col w-full mt-[129px] max-md:mt-10">
+      <div className="min-h-[85px] w-full font-normal">
+        <h2 className="text-[41px] text-[rgba(57,48,45,1)] leading-none max-md:max-w-full">
+          Frequently Asked Questions
+        </h2>
       </div>
-      <div className="min-h-[270px] w-full max-w-[1106px] mt-[29px] pt-[15px] max-md:max-w-full">
-        <div className="w-full max-md:max-w-full">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-white border w-full mt-[19px] border-black border-solid max-md:max-w-full"
-              >
-                <AccordionTrigger className="flex min-h-11 w-full items-center justify-center flex-wrap p-[22px] max-md:max-w-full max-md:px-5">
-                  <div className="self-stretch flex min-w-60 items-stretch text-2xl text-[#39302D] font-normal leading-none flex-1 shrink basis-[11px] my-auto max-md:max-w-full">
-                    <div className="font-normal min-w-60">
-                      {item.question}
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-[22px] py-4 text-lg text-[#39302D]">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+
+      <div className="min-h-[270px] w-full mt-[29px] pt-[15px]">
+        <Accordion type="single" collapsible className="w-full">
+          {faqItems.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="bg-white border border-black mt-[19px] w-full"
+            >
+              <AccordionTrigger className="flex items-center w-full text-left p-[22px] text-2xl text-[#39302D] font-normal max-md:px-5">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="px-[22px] py-4 text-lg text-[#39302D]">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
-    </>
-  );
-};
+    </div>
+  </>
+);
+}
 
 export default FaqSection;

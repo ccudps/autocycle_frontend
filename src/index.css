@@ -56,6 +56,26 @@
     @apply bg-background text-foreground;
   }
 }
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('/fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('/fonts/IBMPlexSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
 
 /* Font Utilities */
 .font-mulish {
@@ -63,6 +83,9 @@
 }
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+.font-ibm {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 :root {

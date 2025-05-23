@@ -18,8 +18,8 @@ export default {
       fontFamily: {
         Mulish: ['Mulish', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
-
-      
+        Ibm: ['"IBM Plex Sans"', 'sans-serif'],
+        plex: ['IBMPlexSans', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',

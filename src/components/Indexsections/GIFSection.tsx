@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
   return (
-        <div className="container mx-auto px-4 py-16">
+      <div className= "flex full-width border-2 border-green-600">
+        <div className="flex w-[50%] mx-auto px-4 py-16 border-2 border-green-600">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/effc1aad896443caa3ee340dbaee97a4/749112e9a4f80c80bf350e98ae05402d36839eb2?placeholderIfAbsent=true"
+                  src="/gifs/rotating.gif"
                   alt="AutoCycle collaboration showcase"
                   className="w-full h-auto object-cover"
                 />
               </div>
+      </div>
     )
 };
 

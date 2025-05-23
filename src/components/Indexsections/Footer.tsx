@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t mt-16 py-10">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start px-6 md:px-8">
+    <footer className="w-full bg-white py-10">
+      <div className="mx-auto flex flex-col md:flex-row justify-between items-start">
         {/* LEFT: Logo/Brand + Info */}
         <div className="flex flex-col gap-3 md:w-1/2">
           <div className="text-3xl font-extrabold uppercase mb-2">AUTOCYCLE</div>
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         {/* RIGHT: Links, stacked */}
-        <div className="flex flex-col gap-6 md:w-1/4 mt-8 md:mt-0">
+        <div className="flex flex-col gap-6 justify-end">
           <Link to="/privacy-policy" className="text-lg font-medium hover:underline text-right md:text-left">
             Privacy Policy
           </Link>
