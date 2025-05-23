@@ -21,7 +21,7 @@ const ResponsiveWrapper: React.FC<ResponsiveWrapperProps> = ({ children }) => {
   if (isSmallScreen) {
     return (
       <div className="flex items-center justify-center min-h-screen text-center px-4 bg-white">
-        <p className="text-xl font-semibold text-red-600">
+        <p className="text-xl poppins font-semibold text-black">
           This website is not optimized for small screens. Please use a larger device.
         </p>
       </div>

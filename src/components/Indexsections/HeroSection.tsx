@@ -3,23 +3,22 @@ import { Link } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="w-full bg-white flex py-16">
+    <div className="w-full bg-white flex py-16 border-2 border-red-200 items-3center">
       <div className="flex flex-col md:flex-row w-full max-w-[1600px] justify-center px-4">
         {/* LEFT COLUMN */}
-        <div className="w-full md:w-60% z-10">
-          <h1 className="text-black text-[64px] lg:text-[100px] leading-none uppercase font-bold relative">
+        <div className="w-full md:w-70% z-10 border-2 border-red-200">
+          <h1 className="text-black text-[clamp(4rem,6vw,8rem)] leading-none uppercase font-bold relative">
             Connect<br />Brands
           </h1>
-          <div className="relative w-[100%] flex-shrink-0 md:aspect-square xl:aspect-auto xl:h-[500px]">
+          <div className="relative w-[100%] flex-shrink-0 aspect-square  xl:h-[600px]">
           {/* Light blue square background */}
           <div className="absolute -top-4 left-0 w-full h-full bg-blue-100 rounded -z-10 ml-5">
           {/* Text in top-left of grey square */}
           <div className="absolute bottom-2 left-1 z-10 text-left">
-            <span className="font-bold text-l text-black leading-tight">
+            <span className="font-bold text-l text-black leading-tight text-[clamp(1rem,2vw,2rem)]">
               BMW<br />x<br />DECATHLON
             </span>
           </div>
-          
           {/* Frisbee image overlapping the square */}
           <img
             src="/images/bmwxdecathlon.png"
@@ -28,11 +27,19 @@ const HeroSection: React.FC = () => {
             style={{ pointerEvents: 'none' }}
             draggable={false}
           />
+          {/* Heading */}
+          <div className="absolute top-[240px] -right-[5rem]">
+                <h2 className=" text-black text-[clamp(4rem,6vw,8rem)] leading-none uppercase font-bold w-fit ml-auto text-right mb:2 ">
+                  <span className="block">CLOSE </span>
+                  <span className="block">LOOPS</span>
+                </h2>
+          </div>
+
           </div>
           
 
           </div>
-
+          
           <div className="mt-6 text-base text-gray-800 font-normal z-10">
               Show your commitment to sustainability by elevating your brand.<br />
               We transform your recycling efforts into a powerful brand asset that customers trust and remember.<br /><br />
@@ -41,14 +48,14 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="w-full md:w-40% z-10">
+        <div className="flex flex-col items-center w-full border-2 border-red-200">
         {/* Samsonite x Bosch */} 
-          <div className="relative flex-shrink-0 w-[100%] h-[0] pt-[72%]">
+          <div className="w-full flex justify-end items-center z-10 border-2 border-red-800">
             {/* Grey square background */}
-            <div className="absolute top-4 right-2 w-[65%] aspect-square bg-gray-300 rounded z-10 max-w-[340px]">
+            <div className="relative w-[70%] aspect-square bg-gray-300 z-10 max-w-[400px]">
               {/* Text in top-right of grey square */}
               <div className="relative top-0 right-2 z-10 text-right">
-                <span className="font-bold text-l text-black leading-tight">
+                <span className="font-bold text-black leading-tight text-[clamp(1rem,2vw,2rem)]">
                   BOSCH<br />x<br />SAMSONITE
                 </span>
               </div>
@@ -56,33 +63,26 @@ const HeroSection: React.FC = () => {
               <img
                 src="/images/boschxsamsonite.png"
                 alt="BMW x Samsonite Luggage"
-                className="absolute -left-8 -bottom-5 w-[75%] h-auto z-20"
+                className="absolute bottom-0 -left-5 h-[70%] z-20 max-w-[240] border-2 border-red-800"
                 style={{ pointerEvents: 'none' }}
                 draggable={false}
               />
             </div>
           </div>
 
-          <div className="relative mb:8">
-            {/* Heading */}
-            <div className="relative w-full overflow-visible">
-                <h2 className="text-black text-[40px] md:text-[60px] lg:text-[80px] leading-none uppercase font-bold w-fit ml-auto text-right mb:2">
-                  <span className="block">CLOSE </span>
-                  <span className="block">LOOPS</span>
-                </h2>
-            </div>
-          {/* Button */}
-          <Link to="/collaborations" className="self-end">
-            <button className="bg-black absolute right-0 text-white px-8 py-2 text-s hover:bg-gray-900 transition mt:4">
-              FIND YOUR COLLABORATION
-            </button>
-          </Link>
-          {/* Card: BMW x IKEA */}
+          {/* Container for button between squares */}
+          <div className="w-full h-[300px] flex justify-end items-center z-10 border-2 border-red-800">
+            <Link to="/collaborations">
+              <button className="bg-black text-white px-8 py-4 text-M hover:bg-gray-900 transition  border-red-200">
+                FIND YOUR COLLABORATION
+              </button>
+            </Link>
           </div>
 
-          <div className="relative flex-shrink-0 w-[100%] h-[0] pt-[100%]">
+        <div className="flex w-full justify-end items-center h-[100px] border-2 border-red-800">
+          <div className="relative w-full h-full">
             {/* Amber square background */}
-            <div className="absolute top-12 right-0 w-[70%] aspect-square bg-[#F1E7D7] z-0">
+            <div className="absolute right-0 w-[70%] aspect-square border-2 border-red-800 bg-[#F1E7D7] max-w-[400px] z-0">
             {/* Chair image overlapping the square */}
               <img
                 src="images/bmxikeachair.png"
@@ -94,7 +94,7 @@ const HeroSection: React.FC = () => {
 
               {/* Text in top-left of square */}
               <div className="absolute top-2 left-2 z-20 text-left">
-                <span className="font-bold text-l text-black leading-tight">
+                <span className="font-bold text-black leading-tight text-[clamp(1rem,2vw,2rem)]">
                   BMW<br />x<br />IKEA
                 </span>
               </div>
@@ -102,6 +102,7 @@ const HeroSection: React.FC = () => {
       
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

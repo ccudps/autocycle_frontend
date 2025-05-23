@@ -75,8 +75,8 @@ const ProductResults: React.FC = () => {
         {/* Main content */}
         <div className="relative z-10 pt-[55%]">
           {/* Left side - Product image */}
-          <div className="absolute w-[55%] left-0 top-0 z-10 aspect-square ">
-            <div className="bg-muted flex items-center p-8 min-h-[320px]">
+          <div className="absolute w-[55%] left-0 top-0 z-10 aspect-square">
+            <div className="bg-muted items-center min-h-[320px] aspect-square">
               <img
                 src="/images/bmwxdecathlon.png"
                 alt="BMW Collaboration Product"
@@ -118,9 +118,9 @@ const ProductResults: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="flex flex-col">
-                <div className="bg-muted aspect-square mb-4 flex items-center justify-center rounded-lg">
+                <div className="bg-muted aspect-square mb-4 flex items-center justify-center">
                   <img
-                    src={`/lovable-uploads/65bd1d70-31e6-43c0-89a1-eb902a13b48d.png`}
+                    src={`/images/bmwxvitra${i}.png`}
                     alt={`BMW x VITRA Product ${i}`}
                     className="w-3/4 h-3/4 object-cover rounded"
                   />
