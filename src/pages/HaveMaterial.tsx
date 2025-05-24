@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useNavigate } from "react-router-dom";
+import FlowNavigator from "@/components/FlowNavigator";
 
 const HaveMaterial: React.FC = () => {
   const navigate = useNavigate();
@@ -15,10 +16,7 @@ const HaveMaterial: React.FC = () => {
   return (
     <div className="relative max-w-5xl mx-auto bg-background min-h-screen px-4 py-12 sm:py-16">
       {/* Form header */}
-      <div className="flex items-center gap-3 mb-10">
-        <div className="w-9 h-0.5 bg-muted"></div>
-        <div className="font-poppins text-base text-muted-foreground">Form</div>
-      </div>
+      <FlowNavigator currentStep="form" brandType="have" />
 
       {/* Main content */}
       <div className="relative z-10">
@@ -55,6 +53,7 @@ const HaveMaterial: React.FC = () => {
                   <SelectItem value="hdpe">High-Density Polyethylene (HDPE)</SelectItem>
                   <SelectItem value="pvc">Polyvinyl Chloride (PVC)</SelectItem>
                   <SelectItem value="ldpe">Low-Density Polyethylene (LDPE)</SelectItem>
+                  <SelectItem value="ldpe">Polycarbonat/Acrylnitril-Butadien-Styrol (PC/ABS)</SelectItem>
                 </SelectContent>
               </Select>
             </div>

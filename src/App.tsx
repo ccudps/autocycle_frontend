@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Collaborations from "./pages/Collaborations";
+import Collaborations from "./pages/collaborations";
 import HaveMaterial from "./pages/HaveMaterial";
 import NeedMaterial from "./pages/NeedMaterial";
 import HaveMaterialBrandMatch from "./pages/hm_brandmatch";

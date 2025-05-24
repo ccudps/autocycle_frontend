@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import FlowNavigator from "@/components/FlowNavigator";
 
 const ProductResults: React.FC = () => {
   const { brand } = useParams();
@@ -22,23 +23,9 @@ const ProductResults: React.FC = () => {
 
   return (
     <div className="bg-background min-h-screen">
-      <div className="max-w-5xl mx-auto pt-16 px-4 sm:px-8">
-        <div className="flex items-center gap-4 font-poppins text-base text-muted-foreground mb-8">
-          <Link to="/" className="text-muted-foreground hover:underline">Form</Link>
-          <svg width="20" height="21" fill="none" className="rotate-90 text-muted-foreground">
-            <path d="M6.31971 15.4084L11.1962 10.5319L6.31971 5.65543L7.295 3.70483L14.1221 10.5319L7.295 17.359L6.31971 15.4084Z" fill="currentColor" />
-          </svg>
-          <Link
-            to={brand?.includes('have') ? "/hm_brandmatch" : "/nm_brandmatch"}
-            className="text-muted-foreground hover:underline"
-          >
-            Brands
-          </Link>
-          <svg width="20" height="21" fill="none" className="rotate-90 text-muted-foreground">
-            <path d="M6.31971 15.4084L11.1962 10.5319L6.31971 5.65543L7.295 3.70483L14.1221 10.5319L7.295 17.359L6.31971 15.4084Z" fill="currentColor" />
-          </svg>
-          <span className="text-primary">Suggestion</span>
-        </div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-8">
+        {/*Navigation*/}
+        <FlowNavigator currentStep="result" brandType="have" />
         
         {/*First Section*/}
         <div className="relative w-full h-100 z-10 pt-[55%]">

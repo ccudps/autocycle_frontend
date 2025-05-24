@@ -77,6 +77,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('/fonts/IBMPlexSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 /* Font Utilities */
 .font-mulish {
   font-family: 'Mulish', sans-serif;

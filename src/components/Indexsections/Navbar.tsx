@@ -16,9 +16,9 @@ const Navbar: React.FC = () => {
 
         {/* Navigation links - centered */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-16 text-lg font-medium whitespace-nowrap border-2 border-red-200">
-          <Link to="/" className="no-underline text-black font-bold">HOME</Link>
-          <a href="#how-it-works" className="no-underline text-black capitalize">Solution</a>
-          <a href="#faq" className="no-underline text-black capitalize">FAQ</a>
+          <Link to="/" className="no-underline text-black font-bold uppercase">HOME</Link>
+          <a href="#how-it-works" className="no-underline text-black uppercase">Solution</a>
+          <a href="#faq" className="no-underline text-black uppercase">FAQ</a>
         </div>
       </div>
     </div>

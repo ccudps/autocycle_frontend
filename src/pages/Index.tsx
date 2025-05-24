@@ -8,8 +8,8 @@ import Footer from "@/components/Indexsections/Footer";
 
 const Index: React.FC = () => {
   return (
-    <div className="bg-white min-h-screen">
-      <div className="bg-background max-w-[1600px] mx-auto min-h-screen">
+    <div className="bg-white min-h-screen justify-center max-w-[1280px]">
+      <div className="mx-[80px] min-h-screen">
         <Navbar />
         <HeroSection />
         <HowItWorks />
